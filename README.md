@@ -1,4 +1,5 @@
 # Faux ReactJS website integrating gsap animations
+You can [check out a demo here](http://barrettjbutterfield.com/_projects/reactjs-carApp).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
