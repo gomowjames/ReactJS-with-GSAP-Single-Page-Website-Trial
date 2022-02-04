@@ -1,6 +1,6 @@
 {
-  "short_name": "Reform Test",
-  "name": "Reform Test",
+  "short_name": "reactjs-carApp",
+  "name": "ReactJS Faux Car App",
   "icons": [
     {
       "src": "favicon.ico",
