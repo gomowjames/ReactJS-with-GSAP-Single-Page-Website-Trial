@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import css from '../utils/cssVariables';
 
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/svg/logo.svg';
 
 const StyledH = styled.header`
   text-align: left;

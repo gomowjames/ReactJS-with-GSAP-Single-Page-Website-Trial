@@ -2,7 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import css from '../utils/cssVariables';
 
-import logo from '../assets/img/logo-footer.svg';
+import logo from '../assets/svg/logo-footer.svg';
+
+const Footer = () => {
+  return (
+    <StyledF className="App-footer">
+      <a href="/">
+        <img src={logo} alt="footer logo" />
+      </a>
+      <LinkWrapper>
+        <a href="/">About Us</a>
+        <a href="/">Terms of Use</a>
+        <a href="/">FAQ</a>
+      </LinkWrapper>
+    </StyledF>
+  )
+}
 
 const StyledF = styled.footer`
   text-align: left;
@@ -23,7 +38,7 @@ const StyledF = styled.footer`
     display: inline-block;
     height: 1rem;
   }
-`;
+`
 
 const LinkWrapper = styled.div`
   display: inline-block;
@@ -42,23 +57,7 @@ const LinkWrapper = styled.div`
   
   & > a:nth-of-type(2) {
     margin: 0 3rem;
-  }
-  
+  } 
 `
-
-const Footer = () => {
-  return (
-    <StyledF className="App-footer">
-      <a href="#">
-        <img src={logo} alt="footer logo" />
-      </a>
-      <LinkWrapper>
-        <a href="#">About Us</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">FAQ</a>
-      </LinkWrapper>
-    </StyledF>
-  )
-}
 
 export default Footer;

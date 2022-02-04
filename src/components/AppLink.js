@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import css from '../utils/cssVariables';
 
-import arrow from '../assets/img/arrow.svg';
+import arrow from '../assets/svg/arrow.svg';
 
 const LinkOut = styled.a`
   color: #414A69;
