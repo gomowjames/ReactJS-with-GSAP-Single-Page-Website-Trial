@@ -39,9 +39,9 @@ function App() {
     return (
       <main>
         <GlobalStyle />
+          <LoadingAnim loading={isLoading} />
 
-        { isLoading ?
-          <LoadingAnim /> :
+        {!isLoading ?
           <>
           <Header />
           <Intro />
@@ -54,6 +54,7 @@ function App() {
           </BoxedContent>
           <Footer />          
           </>
+        : null  
         }
 
         <ImgLoader>{loadImages()}</ImgLoader>
@@ -70,6 +71,7 @@ const ImgLoader = styled.div`
   height: 0;
   width: 0;
   opacity: 0;
+  transition: all ease-out 500ms;
 `;
 
 export default App;

@@ -12,7 +12,6 @@ import device from '../assets/img/intro-phone-with-shadow.png';
 const Intro = (props) => {
 
   const parentDiv = useRef();
-  const carAnimate = useRef();
   const phoneAnimate = useRef();
   const h1Animate = useRef();
   const linkAnimate = useRef();
@@ -20,14 +19,11 @@ const Intro = (props) => {
   useLayoutEffect( () => {
     let introSeq = gsap.timeline({});
 
-      introSeq.from([parentDiv.current], {
-          x: "-100%",
-          duration: 1,
-        })
-        .from([carAnimate.current], {
-          x: "-200%",
-          duration: 1,
-        })
+      introSeq.fromTo([parentDiv.current],
+        {left: "-100%"},
+        {left: 0, duration: .5}
+        )
+        .delay(1)
         .from([phoneAnimate.current], {
           x: "400%",
           duration: 1,
@@ -54,7 +50,7 @@ const Intro = (props) => {
           </div>
         </TextWrapper>
 
-        <CarWrapper ref={carAnimate}>
+        <CarWrapper>
           <img src={carGroup} alt="Porsche / Mercedes Benz / Audi A7-MY18 compiled " onLoad={props.handleImgLoad}/>
         </CarWrapper>
       </ContentLeft>
@@ -69,11 +65,13 @@ const Intro = (props) => {
 // STYLIZATION
 const ContentWrapper = styled.section`
   background-color: ${css.primary};
+  width: 100%;
   height: 50vw;
   display: flex;
   flex-direction: row;
   margin-bottom: 15vw;
   padding-top: 10vh;
+  will-change: transform;
   
   ${css.mobile} {
     position: relative;

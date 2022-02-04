@@ -1,10 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import css from '../utils/cssVariables';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import AppLink from '../components/AppLink';
 
 import pricingImg from '../assets/img/prop-pricing.png';
 import insuranceImg from '../assets/img/prop-insurance.png';
