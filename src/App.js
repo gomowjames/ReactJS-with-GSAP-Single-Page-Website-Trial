@@ -54,10 +54,8 @@ function App() {
           </BoxedContent>
           <Footer />          
           </>
-        : null  
+        : <ImgLoader>{loadImages()}</ImgLoader>  
         }
-
-        <ImgLoader>{loadImages()}</ImgLoader>
       </main>
     )
 }
